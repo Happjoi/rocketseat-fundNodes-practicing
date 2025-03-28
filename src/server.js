@@ -11,7 +11,6 @@ import http from 'node:http'
 const users = [];
 
 const server =  http.createServer ((req, res) => {
-    res.end('Hello Ignite')
     const {method , url} = req
 
     if(method === 'GET' && url === '/users') {
@@ -30,7 +29,7 @@ const server =  http.createServer ((req, res) => {
         return res.writeHead(201).end('Criação de usuário')
     } 
 
-    return res.writeHead(404).end('Not Found')
+    return res.writeHead(404).end('Method Not Found')
 
 })
 //para o servidor ser criado na port 4444
