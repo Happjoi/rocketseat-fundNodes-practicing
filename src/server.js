@@ -2,6 +2,7 @@
 // no caso do http, dentro desses modulos tem diversas coisas que ajudam a desenvolver um projeto usando o modulo http
 // const http = require('http')    ele vem por padrão na forma default do JS, que para importar nós usamos o const e o require, mas nas versões atuais, alterando no package.json, mudamos o type do nosso arquivo para module, assim importando dessa forma, até para exportar  A declaração estática import é usada para importar vínculos que são exportados por um outro módulo.
 import http from 'node:http'
+import { json } from './middlewares/json.js';
 // para diferenciar modulos do proprio node de modulos de terceiros, utilizamos 'node:'.
 //isso é para criar o servidor
 //stateful, vamos armazenar no proprio arquivo, ao invés de armazenamento externo
@@ -10,8 +11,10 @@ import http from 'node:http'
 //requisição http
 const users = [];
 
-const server =  http.createServer ((req, res) => {
+const server =  http.createServer (async(req, res) => {
     const {method , url} = req
+
+    await json(req, res)
 
     if(method === 'GET' && url === '/users') {
         //early return
@@ -21,10 +24,12 @@ const server =  http.createServer ((req, res) => {
     }
 
     if(method === 'POST' && url === '/users') {
+        const { name, email } = req.body
+        
         users.push({
             id: 1,
-            email: 'johnDoe@gmail.com',
-            name: 'John Doe',
+            email,
+            name,
         })
         return res.writeHead(201).end('Criação de usuário')
     } 

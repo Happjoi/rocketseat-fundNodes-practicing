@@ -26,7 +26,7 @@ class MultiplyByTenStream extends Writable {
 
 class ChangeTheValue extends Transform{
     _transform(chunk, enconding, callback) {
-        const transformed = Number(chunk.toString()) * -1
+        const transformed = Number(chunk.toString()) * -1;
 
         callback(null, Buffer.from(String(transformed)))
     }
