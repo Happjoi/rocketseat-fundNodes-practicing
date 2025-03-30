@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Happjoi/rocketseat-growup-residencia/issues"
   },
-  "homepage": "https://github.com/Happjoi/rocketseat-growup-residencia#readme"
+  "homepage": "https://github.com/Happjoi/rocketseat-growup-residencia#readme",
+  "workbench.iconTheme": "fira-code-material-icon-theme",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true
 }
+  
+  

@@ -8,8 +8,8 @@ export async function json(req, res) {
     try{
         req.body =  JSON.parse(Buffer.concat(buffers).toString())
     }catch {
-        req.body = null
+        req.body = {}
     }
 
-    return res.setHeader('Content-Type', 'aplication/json')
+    return res.setHeader('Content-Type', 'application/json');
 }
