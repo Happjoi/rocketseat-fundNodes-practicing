@@ -21,3 +21,8 @@ stateful - o armazenamento é tudo colocado na propria maquina (interno), ou sej
 stateless - o armazenamento é subido para um local externo, já nesse caso, se você perder, dá para recuperar.
 
 não dá para se enviar um array para o frontend utilizando node
+
+{
+    "name": "João Italo",
+    "email": "joaoitalo@gmail.com"
+}

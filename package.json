@@ -5,7 +5,7 @@
   "description": "Anotações presentes no arquivo\r // para requisitar modulos presentes no proprio Node, já que o node comporta diversos modulos internos, além disso podemos importar modulos externos, para ajudar no desenvolvimento backend\r // no caso do http, dentro desses modulos tem diversas coisas que ajudam a desenvolver um projeto usando o modulo http\r // const http = require('http')    ele vem por padrão na forma default do JS, que para importar nós usamos o const e o require, mas nas versões atuais, alterando no package.json, mudamos o type do nosso arquivo para module, assim importando dessa forma, até para exportar  A declaração estática import é usada para importar vínculos que são exportados por um outro módulo.",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch /src/server.js"
+    "dev": "node --watch src/server.js"
   },
   "keywords": [],
   "author": "",
